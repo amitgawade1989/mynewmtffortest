@@ -1,0 +1,27 @@
+# Tested with Python 3.14 on Windows 11 (versions below are the ones tested; newer usually works)
+
+# Phase 0 - document loading and chunking
+pymupdf>=1.28
+python-docx>=1.2
+langchain-text-splitters>=1.1
+pyyaml>=6.0
+python-dotenv>=1.2
+
+# LLM + embeddings (LangChain); install the provider(s) you use
+langchain-core>=1.6
+langchain-openai>=1.7
+langchain-google-genai>=4.4
+tenacity>=9.1
+numpy>=2.0
+
+# Phase 3 - vector store (one Chroma collection per document)
+chromadb>=1.5
+langchain-chroma>=1.1
+
+# Phase 4 - deterministic NLI classifier + readability (downloads a ~700 MB model on first run)
+sentence-transformers>=6.0
+torch>=2.6
+textstat>=0.7
+
+# Phase 5 - Excel scorecard
+openpyxl>=3.1

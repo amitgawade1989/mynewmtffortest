@@ -1,0 +1,55 @@
+{
+  "created_at": "2026-10-17T20:22:50.360943+00:00",
+  "models": {
+    "provider": "openai",
+    "temperature": 0,
+    "generator": "gpt-5.4-mini",
+    "under_test": "gpt-4.1-mini",
+    "judge": "gpt-5.4-mini",
+    "embeddings": "text-embedding-3-large"
+  },
+  "n_candidates": 88,
+  "n_accepted": 81,
+  "n_rejected": 7,
+  "by_type": {
+    "equivalence": 19,
+    "differential": 43,
+    "asymmetric": 19
+  },
+  "by_reasoning": {
+    "direct": 27,
+    "multi_hop": 40,
+    "numeric": 8,
+    "conditional": 6
+  },
+  "by_difficulty": {
+    "easy": 21,
+    "hard": 28,
+    "medium": 32
+  },
+  "by_topic": {
+    "T01": 6,
+    "T02": 10,
+    "T03": 10,
+    "T04": 9,
+    "T05": 8,
+    "T06": 8,
+    "T07": 10,
+    "T08": 10,
+    "T09": 10,
+    "T10": 8
+  },
+  "accepted_after_revision": 21,
+  "rejection_reasons": {
+    "critic: too_trivial": 2,
+    "type 'equivalence' does not fit the cited pair relations ['P": 2,
+    "question text reveals metadata / document identity": 1,
+    "type 'equivalence' does not fit the cited pair relations ['D": 1,
+    "type 'asymmetric' does not fit the cited pair relations ['DI": 1
+  },
+  "token_usage": {
+    "input_tokens": 811337,
+    "output_tokens": 101219,
+    "calls": 352
+  }
+}

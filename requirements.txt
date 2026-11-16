@@ -1,0 +1,31 @@
+# Target environment (versions in use). The LLM is an in-house service, so no LLM SDK is listed here.
+
+# Phase 0 - document loading and chunking
+PyMuPDF==1.25.3
+python-docx==1.2.0
+langchain-text-splitters==0.3.11
+PyYAML==6.0.3
+python-dotenv==1.0.1
+langchain-core==0.3.86
+
+# Retries / numerics
+tenacity==9.1.4
+numpy==2.5.4
+
+# Phase 3 - vector store (one Chroma collection per document)
+# NOTE: chromadb 0.5.5 declares numpy<2 and references np.float_ (removed in numpy 2.0).
+#       src/rag/store.py restores that alias before importing chromadb, so it works with numpy 2.5.4.
+#       pip may warn about the numpy conflict; the warning is expected.
+chromadb==0.5.5
+langchain-chroma==0.2.6
+
+# Embeddings (local all-MiniLM-L6-v2, 384 dims) + Phase 4 NLI cross-encoder
+sentence-transformers==3.0.1
+torch==2.14.1          # CPU build: pip install torch==2.14.1 --index-url https://download.pytorch.org/whl/cpu
+onnxruntime==1.26.0
+
+# Phase 5 - Excel scorecard
+openpyxl==3.1.5
+
+# Optional - only if evaluation.optional_metrics.linguistic_quality: true
+# textstat

@@ -1,0 +1,26 @@
+{
+  "created_at": "2026-10-17T21:23:20.422388+00:00",
+  "seed": 7,
+  "models": {
+    "provider": "openai",
+    "temperature": 0,
+    "seed": 42,
+    "generator": "gpt-5.4-mini",
+    "under_test": "gpt-4.1-mini",
+    "judge": "gpt-5.4-mini",
+    "embeddings": "text-embedding-3-large"
+  },
+  "n_variants": 458,
+  "by_test": {
+    "R1_semantic": 90,
+    "R2_adversarial": 58,
+    "R4_ambiguity": 12,
+    "R4_insufficient_evidence": 12,
+    "R2_typo_noise": 90,
+    "R1_repeatability": 50,
+    "R2_long_context": 60,
+    "R3_format": 48,
+    "R3_constraint": 18,
+    "R3_multi_step": 20
+  }
+}

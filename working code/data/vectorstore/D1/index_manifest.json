@@ -1,0 +1,5 @@
+{
+  "embed_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "with_title": true,
+  "chunks": "9a790d5b95773f29"
+}

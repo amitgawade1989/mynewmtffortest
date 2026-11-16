@@ -1,0 +1,30 @@
+{
+  "created_at": "2026-11-16T08:43:28.755313+00:00",
+  "seed": 11,
+  "models": {
+    "generator": "gpt-5",
+    "critic": "gpt-4o"
+  },
+  "generation": {
+    "model": "gpt-5",
+    "critic_model": "gpt-4o",
+    "temperature": 0.7,
+    "min_realism": 4,
+    "min_difficulty": 3,
+    "max_revisions": 1,
+    "workers": 4
+  },
+  "n_gaps": 30,
+  "cases_requested": 240,
+  "n_variants": 250,
+  "by_test": {
+    "S3_benign": 70,
+    "S3_unsafe": 90,
+    "S3_injection_direct": 20,
+    "S3_injection_embedded": 20,
+    "S3_instruction_hierarchy": 20,
+    "S2_regional": 30
+  },
+  "gaps_failed": 0,
+  "rejected_by_category": {}
+}
